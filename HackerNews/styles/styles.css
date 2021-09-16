@@ -1,0 +1,162 @@
+body {
+  margin-left: 99px;
+  margin-right: 99px;
+  margin-bottom: 30px;
+}
+
+.container .head-nav {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fd6721;
+}
+.container .head-nav .hn-left {
+  width: 485px;
+  display: flex;
+  align-items: center;
+}
+.container .head-nav .hn-left .logo {
+  height: 18px;
+  width: 18px;
+  border: solid 1px white;
+  margin-left: 2px;
+}
+.container .head-nav .hn-left a {
+  text-decoration: none;
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 13.3333px;
+  color: black;
+  margin-left: 5px;
+  margin-right: 6px;
+  white-space: nowrap;
+}
+.container .head-nav .hn-right {
+  width: auto;
+}
+.container .head-nav .hn-right a {
+  text-decoration: none;
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 13.3333px;
+  color: black;
+  margin-right: 6px;
+  white-space: nowrap;
+}
+.container .feed {
+  width: 100%;
+  height: 1093px;
+  background-color: #f6f6f0;
+  border-bottom: solid 1px #fd6721;
+  /* -------------------------------------------------------- */
+  /* -------------------------------------------------------- */
+}
+.container .feed .feed-item {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .feed .feed-item .rank {
+  height: 100%;
+  width: 35px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+.container .feed .feed-item .rank .rank-num {
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 13.3333px;
+  text-decoration: none, solid, #828282;
+  color: #828282;
+}
+.container .feed .feed-item .rank .upvote-btn {
+  height: 23px;
+  width: 15px;
+  background-color: inherit;
+  border-style: hidden;
+  position: relative;
+}
+.container .feed .feed-item .rank .upvote-btn .upvote-img {
+  width: 11px;
+  position: absolute;
+  left: 3px;
+  top: 0;
+}
+.container .feed .feed-item .post-info .filler {
+  width: 100%;
+  height: 15px;
+}
+.container .feed .feed-item .post-info .post-main .post-title {
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 13.3333px;
+  color: black;
+  text-decoration: none;
+}
+.container .feed .feed-item .post-info .post-main .post-source {
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 10.6667px;
+  color: #828282;
+  text-decoration: none;
+}
+.container .feed .feed-item .post-info .post-main .post-source:hover {
+  text-decoration: underline;
+}
+.container .feed .feed-item .post-info .poster {
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 9.3333px;
+  color: #828282;
+  text-decoration: none;
+}
+.container .feed .feed-item .post-info .poster .poster-link {
+  color: #828282;
+  text-decoration: none;
+}
+.container .feed .feed-item .post-info .poster .poster-link:hover {
+  text-decoration: underline;
+}
+.container .foot-nav {
+  width: 100%;
+  height: 79px;
+  background-color: #f6f6f0;
+  border-top: solid 1px #fd6721;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .foot-nav div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .foot-nav a {
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 10.6667px;
+  text-decoration: none solid black;
+  color: black;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.container .foot-nav span {
+  color: #878787;
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 13.3333px;
+}
+.container .foot-nav .foot-nav-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .foot-nav .foot-nav-search label {
+  padding: 4px;
+  color: #878787;
+  font-family: Verdana, geneva, sans-serif;
+  font-size: 13.3333px;
+}
+
+/*# sourceMappingURL=styles.css.map */

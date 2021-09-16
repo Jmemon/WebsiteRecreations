@@ -1,0 +1,215 @@
+$head-nav-height: 24;
+$feed-height: 1093;
+$foot-nav-height: 79;
+
+$hn-left-width: 485;
+$hn-right-width: 100;
+
+body {
+  margin-left: 99px;
+  margin-right: 99px;
+  margin-bottom: 30px;
+}
+
+.container {
+
+  .head-nav {
+    width: 100%;
+    height: $head-nav-height * 1px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(253, 103, 33);
+
+    .hn-left {
+      width: $hn-left-width * 1px;
+
+      display: flex;
+      align-items: center;
+
+      .logo {
+        height: 18px;
+        width: 18px;
+        border: solid 1px rgb(255, 255, 255);
+
+        margin-left: 2px;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: Verdana, geneva, sans-serif;
+        font-size: 13.3333px;
+
+        color: black;
+        margin-left: 5px;
+        margin-right: 6px;
+
+        white-space: nowrap;
+      }
+    }
+
+    .hn-right {
+      width: auto;
+
+      a {
+        text-decoration: none;
+        font-family: Verdana, geneva, sans-serif;
+        font-size: 13.3333px;
+
+        color: black;
+        margin-right: 6px;
+
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .feed {
+    width: 100%;
+    height: $feed-height * 1px;
+    background-color: rgb(246, 246, 240);
+
+    border-bottom: solid 1px rgb(253, 103, 33);
+
+/* -------------------------------------------------------- */
+    .feed-item {
+      height: 40px;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .rank {
+        height: 100%;
+        width: 35px;
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: baseline;
+        justify-content: flex-end;
+
+        .rank-num {
+          font-family: Verdana, geneva, sans-serif;
+          font-size: 13.3333px;
+          text-decoration: none, solid, rgb(130, 130, 130);
+          color: rgb(130, 130, 130);
+        }
+
+        .upvote-btn {
+          height: 23px;
+          width: 15px;
+          background-color: inherit;
+          border-style: hidden;
+          position: relative;
+
+          .upvote-img {
+            width: 11px;
+            position: absolute;
+            left: 3px;
+            top: 0;
+          }
+        }
+      }
+
+      .post-info {
+        .filler {
+          width: 100%;
+          height: 15px;
+        }
+
+        .post-main {
+          .post-title {
+            font-family: Verdana, geneva, sans-serif;
+            font-size: 13.3333px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+          }
+
+          .post-source {
+            font-family: Verdana, geneva, sans-serif;
+            font-size: 10.6667px;
+            color: rgb(130, 130, 130);
+            text-decoration: none;
+          }
+
+          .post-source:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .poster {
+          font-family: Verdana, geneva, sans-serif;
+          font-size: 9.3333px;
+          color: rgb(130, 130, 130);
+          text-decoration: none;
+
+          .poster-link {
+            color: rgb(130, 130, 130);
+            text-decoration: none;
+          }
+
+          .poster-link:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+/* -------------------------------------------------------- */
+  }
+
+  .foot-nav {
+    width: 100%;
+    height: $foot-nav-height * 1px;
+    background-color: rgb(246, 246, 240);
+
+    border-top: solid 1px rgb(253, 103, 33);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      font-family: Verdana, geneva, sans-serif;
+      font-size: 10.6667px;
+      text-decoration: none solid rgb(0,0,0);
+      color: rgb(0,0,0);
+
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    span {
+      color: rgb(135, 135, 135);
+      font-family: Verdana, geneva, sans-serif;
+      font-size: 13.3333px;
+    }
+
+    .foot-nav-search {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      label {
+        padding: 4px;
+
+        color: rgb(135, 135, 135);
+        font-family: Verdana, geneva, sans-serif;
+        font-size: 13.3333px;
+      }
+    }
+  }
+}

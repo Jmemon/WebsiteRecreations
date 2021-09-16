@@ -1,0 +1,262 @@
+$head-nav-h: 60;
+$hnh: $head-nav-h + 0px;
+$logo-div-h: 290;
+$ldh: $logo-div-h + 0px;
+$search-h: 159;
+$sh: $search-h + 0px;
+$feat-link-h: 33;
+$flh: $feat-link-h + 0px;
+$foot-nav-h: 47;
+$fnh: $foot-nav-h + 0px;
+$row-sum: $head-nav-h + $logo-div-h + $search-h
+        + $feat-link-h + $foot-nav-h;
+$filler-h: calc(100vh - ($row-sum + 0px));
+
+@mixin foot-nav-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  a {
+    padding: 15px;
+    color: rgb(110, 115, 120);
+    text-decoration: none;
+    font-family: Roboto, arial, sans-serif;
+    font-size: 14px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  /*grid-template-rows: [head-nav] $hnh [logo-div] $ldh
+                      [search] $sh [feat-link] $flh
+                      [filler] $filler-h [foot-nav] $fnh [end];*/
+  grid-template-rows: [head-nav] 60px
+                      [logo-div] 290px
+                      [search] 159px
+                      [feat-link] 33px
+                      [filler] calc(100vh - (60px + 290px + 159px + 33px + 47px))
+                      [foot-nav] 47px [end];
+  grid-template-columns: 100vw;
+
+  .head-nav {
+    grid-row: head-nav / logo-div;
+
+    display: flex;
+    justify-content: space-between;
+
+    .left-head-nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      a {
+        color: rgb(34, 34, 34);
+        text-decoration: none;
+
+        font-family: Roboto, arial, sans-serif;
+        font-size: 14px;
+
+        margin: 0px 5px 0px 15px;
+        padding: 5px;
+      }
+    }
+
+    .right-head-nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      a {
+        color: rgb(34, 34, 34);
+        text-decoration: none;
+
+        font-family: arial, sans-serif;
+        font-size: 13px;
+
+        margin: 0px 5px 0px 15px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .logo-div {
+    grid-row: logo-div / search;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .search {
+    grid-row: search / feat-link;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .bar-buttons-div {
+      height: 140px;
+      width: 560px;
+
+      .bar-buttons {
+        height: 140px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .bar {
+          width: 560px;
+          height: 44px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          border-style: solid;
+          border-width: 1px;
+          border-color: rgb(223, 225, 229);
+          border-radius: 24px;
+
+          .mg-div {
+            display: flex;
+            align-items: center;
+
+            height: 100%;
+            width: 30px;
+
+            .magnifying-glass {
+              height: 20px;
+              width: 20px;
+            }
+          }
+
+          .search-input {
+            border-style: hidden;
+            height: 87%;
+            width: 475px;
+
+            font-family: Roboto, arial, sans-serif;
+            font-size: 16px;
+          }
+
+          .search-input:focus {
+            outline: none;
+          }
+
+          .mic-div {
+            display: flex;
+            align-items: center;
+
+            height: 100%;
+            width: 24px;
+
+            .microphone {
+              height: 24px;
+              width: 24px;
+            }
+          }
+        } /* end of .bar */
+
+        .bar:hover {
+          border-color: rgb(251, 251, 251);
+          box-shadow: 0px 2px 6px rgb(200, 200, 200);
+        }
+
+        .sl-btn {
+          border-style: hidden;
+          color: rgb(60, 64, 67);
+          background-color: rgb(248, 249, 250);
+          height: 36px;
+          width: 127px;
+          margin: 5px;
+          font-family: Roboto, arial, sans-serif;
+          font-size: 14px;
+        }
+
+        .sl-btn:hover {
+          border-style: solid;
+          border-width: 1px;
+          border-color: rgb(218, 220, 224);
+          border-radius: 4px;
+                   /* dx  dy  blur color */
+          box-shadow: 0px 1px 1px rgb(234, 234, 234);
+        }
+
+        /*
+        For spinning animation:
+        - Have a div with a bunch of smaller divs
+        with each of the different possible options in it
+        - Make that large div's z-index -1 so it's behind
+        everything else
+        - On hover, have it scroll down one of some set
+        of predetermiend intervals to land on one of the quotes
+        - Use absolute positions and top attribute to scroll
+        - Flaw: how will the text appear on top only on button */
+        .lucky-btn {
+          width: 142px;
+        }
+      } /* end of .bar-buttons */
+    }
+  }
+
+  .feat-link {
+    grid-row: feat-link / filler;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .yt-link {
+      text-decoration: none;
+      font-family: arial;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+
+      color: #1a0dab;
+      margin-left: 5px;
+      margin-bottom: 2px;
+    }
+
+    .yt-link:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .filler {
+    grid-row: filler / foot-nav;
+  }
+
+  .foot-nav {
+    grid-row: foot-nav / end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(242, 242, 242);
+
+    .left-foot-nav {
+      @include foot-nav-div;
+    }
+
+    .center-foot-nav {
+      @include foot-nav-div;
+
+      a {
+        padding: 5px;
+      }
+    }
+
+    .right-foot-nav {
+      @include foot-nav-div;
+    }
+  }
+}

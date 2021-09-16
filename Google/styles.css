@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  /*grid-template-rows: [head-nav] $hnh [logo-div] $ldh
+                      [search] $sh [feat-link] $flh
+                      [filler] $filler-h [foot-nav] $fnh [end];*/
+  grid-template-rows: [head-nav] 60px [logo-div] 290px [search] 159px [feat-link] 33px [filler] calc(100vh - (60px + 290px + 159px + 33px + 47px)) [foot-nav] 47px [end];
+  grid-template-columns: 100vw;
+}
+.container .head-nav {
+  grid-row: head-nav/logo-div;
+  display: flex;
+  justify-content: space-between;
+}
+.container .head-nav .left-head-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .head-nav .left-head-nav a {
+  color: #222222;
+  text-decoration: none;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 14px;
+  margin: 0px 5px 0px 15px;
+  padding: 5px;
+}
+.container .head-nav .right-head-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .head-nav .right-head-nav a {
+  color: #222222;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  margin: 0px 5px 0px 15px;
+  padding: 5px;
+}
+.container .logo-div {
+  grid-row: logo-div/search;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.container .search {
+  grid-row: search/feat-link;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.container .search .bar-buttons-div {
+  height: 140px;
+  width: 560px;
+  /* end of .bar-buttons */
+}
+.container .search .bar-buttons-div .bar-buttons {
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* end of .bar */
+  /*
+  For spinning animation:
+  - Have a div with a bunch of smaller divs
+  with each of the different possible options in it
+  - Make that large div's z-index -1 so it's behind
+  everything else
+  - On hover, have it scroll down one of some set
+  of predetermiend intervals to land on one of the quotes
+  - Use absolute positions and top attribute to scroll
+  - Flaw: how will the text appear on top only on button */
+}
+.container .search .bar-buttons-div .bar-buttons .bar {
+  width: 560px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dfe1e5;
+  border-radius: 24px;
+}
+.container .search .bar-buttons-div .bar-buttons .bar .mg-div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 30px;
+}
+.container .search .bar-buttons-div .bar-buttons .bar .mg-div .magnifying-glass {
+  height: 20px;
+  width: 20px;
+}
+.container .search .bar-buttons-div .bar-buttons .bar .search-input {
+  border-style: hidden;
+  height: 87%;
+  width: 475px;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 16px;
+}
+.container .search .bar-buttons-div .bar-buttons .bar .search-input:focus {
+  outline: none;
+}
+.container .search .bar-buttons-div .bar-buttons .bar .mic-div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 24px;
+}
+.container .search .bar-buttons-div .bar-buttons .bar .mic-div .microphone {
+  height: 24px;
+  width: 24px;
+}
+.container .search .bar-buttons-div .bar-buttons .bar:hover {
+  border-color: #fbfbfb;
+  box-shadow: 0px 2px 6px #c8c8c8;
+}
+.container .search .bar-buttons-div .bar-buttons .sl-btn {
+  border-style: hidden;
+  color: #3c4043;
+  background-color: #f8f9fa;
+  height: 36px;
+  width: 127px;
+  margin: 5px;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 14px;
+}
+.container .search .bar-buttons-div .bar-buttons .sl-btn:hover {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dadce0;
+  border-radius: 4px;
+  /* dx  dy  blur color */
+  box-shadow: 0px 1px 1px #eaeaea;
+}
+.container .search .bar-buttons-div .bar-buttons .lucky-btn {
+  width: 142px;
+}
+.container .feat-link {
+  grid-row: feat-link/filler;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .feat-link .yt-link {
+  text-decoration: none;
+  font-family: arial;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  color: #1a0dab;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+.container .feat-link .yt-link:hover {
+  text-decoration: underline;
+}
+.container .filler {
+  grid-row: filler/foot-nav;
+}
+.container .foot-nav {
+  grid-row: foot-nav/end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+}
+.container .foot-nav .left-foot-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .foot-nav .left-foot-nav a {
+  padding: 15px;
+  color: #6e7378;
+  text-decoration: none;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 14px;
+}
+.container .foot-nav .center-foot-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .foot-nav .center-foot-nav a {
+  padding: 15px;
+  color: #6e7378;
+  text-decoration: none;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 14px;
+}
+.container .foot-nav .center-foot-nav a {
+  padding: 5px;
+}
+.container .foot-nav .right-foot-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .foot-nav .right-foot-nav a {
+  padding: 15px;
+  color: #6e7378;
+  text-decoration: none;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=styles.css.map */
