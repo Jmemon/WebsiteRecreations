@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GitHub –</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="main-nav">
+      <div class="main-nav-left">
+        <a href="https://github.com"><img class="logo" id="logo-hover" src="logo-hover.png" width=45px alt="logo"></a>
+        <a href="https://github.com"><img class="logo" id="logo-nohover" src="logo-nohover.png" width=45px alt="logo"></a>
+        <input type="text" placeholder="Search or jump to...">
+        <a href="https://github.com/pulls">Pull Requests</a>
+        <a href="https://github.com/issues">Issues</a>
+        <a href="https://github.com/marketplace">Marketplace</a>
+        <a href="https://github.com/explore">Explore</a>
+      </div>
+      <div class="main-nav-right">
+        <a href="https://github.com/notifications">Bell</a>
+        <div class="dropdown">
+          <button class="dropdown-btn" id="newDD-btn" onclick="toggleNewDD()">New #9660</button>
+          <div class="dropdown-content" id="newDD">
+            <a href="#">New repository</a>
+            <a href="#">Import repository</a>
+            <a href="#">New gist</a>
+            <a href="#">New organization</a>
+            <a href="#">New project</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropdown-btn" id="profDD-btn" onclick="toggleProfDD()">Profile #9660</button>
+          <div class="dropdown-content" id="profDD">
+            <a href="#">Signed in as Jmemon</a>
+            <button class="status-btn"></button>
+            <a href="#">Your profile</a>
+            <a href="#">Your repositories</a>
+            <a href="#">Your codespaces</a>
+            <a href="#">Your projects</a>
+            <a href="#">Your stars</a>
+            <a href="#">Your gists</a>
+            <a href="#">Upgrade</a>
+            <a href="#">Feature preview</a>
+            <a href="#">Help</a>
+            <a href="#">Settings</a>
+            <a href="#">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="user-nav">
+        <div class="user-repos">
+          <span>Repositories</span>
+          <button id="new-repo-btn">New</button>
+          <input type="text" placeholder="Find a repository...">
+          <a href="#">Jmemon/NUFileSystem</a>
+          <a href="#">Jmemon/MemoryAllocator</a>
+          <a href="#">Jmemon/SimpleProcessor</a>
+          <a href="#">Jmemon/CudaNeuralNet</a>
+        </div>
+        <div class="collaboration">
+          <span>Working with a team?</span>
+          <p>GitHub is built for collaboration. Set up an organization to
+          improve the way your team works together, and get access to more
+          features.</p>
+          <button id="create-org-btn">Create an organization</button>
+        </div>
+      </div>
+      <div class="explore-feed">
+        <div class="feed">
+          <p>NEED TO PUT A FEED HERE</p>
+        </div>
+        <div class="explore">
+          <span>Explore repositories</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
