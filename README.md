@@ -1,3 +1,4 @@
 # WebsiteRecreations
 
-Each folder is an attempt at recreating a website from scratch. 
+This repository is a place for me to store my recreations of various websites so I
+can improve my web development skills.
